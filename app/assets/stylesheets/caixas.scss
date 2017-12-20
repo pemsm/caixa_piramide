@@ -132,7 +132,7 @@ svg .fill {
 .button_agenda svg .fill {
     fill: #fff;
 }
-.button_agenda span {
+.button_agenda span, #input_new_agenda, #input_clear_agenda {
     font-family: 'Gloria Hallelujah', cursive;
 }
 .new_agenda, .back_agenda {
@@ -162,4 +162,23 @@ svg .fill {
 .show-list ul li p {
   margin: 0px;
   padding: 10px 0 10px 20px;
+}
+.form-caixa {
+  display: block;
+  margin-left: 50px;
+  width: 80%;
+  border: 1px solid #d6c7e3;
+  border-radius: 10px;
+}
+.form-caixa p {
+  margin: 0px;
+  padding: 10px 0 10px 20px;
+}
+#caixa_data,#caixa_caixa_inicial,#caixa_dinheiro,#caixa_saida,#caixa_descricao,#caixa_cheque,#caixa_maquineta_loja,#caixa_maquineta_motoboy,#caixa_cappta,#caixa_mundipagg,#caixa_caixa_final {
+  border-radius: 5px;
+  border: 1px solid #d6c7e3;
+}
+#input_new_agenda, #input_clear_agenda {
+  cursor: pointer;
+  height: 34px;
 }
