@@ -83,7 +83,7 @@ svg .fill {
   fill: #ff4c4c;
 }
 .tabela, #header {
-  padding: 20px 0 20px 0 ;
+  padding: 15px 0 15px 0 ;
 }
 #watercolor {
   width: 220px;
@@ -96,13 +96,13 @@ svg .fill {
   top: 25px;
   left: 50px;
 }
-#titulo h1 {
+#titulo h1, #titulo h2 {
   font-family: 'Gloria Hallelujah', cursive;
   color: #9756a3;
   padding-top: 25px;
   text-shadow: 2px 2px  rgba(44,62,80,0.15);
 }
-.new_agenda {
+.new_agenda, .edit_agenda, .back_agenda {
   position:absolute;
   width: 150px;
   background-color: #9756a3;
@@ -115,21 +115,43 @@ svg .fill {
   -o-transition:all .3s ease-out;
   transition:all .3s ease-out;
 }
-.new_agenda:hover {
+.new_agenda:hover, .edit_agenda:hover, .back_agenda:hover {
   -webkit-transform:translate(0px,-5px);
   -moz-transform:translate(0px,-5px);
   -ms-transform:translate(0px,-5px);
   -o-transform:translate(0px,-5px);
   transform:translate(0px,-5px);
 }
-.new_agenda svg {
+.new_agenda svg, .edit_agenda svg, .back_agenda svg {
    margin: 0 8px 3px 0;
    width: 20px;
    height: 20px;
 }
-.new_agenda svg .fill {
+.new_agenda svg .fill, .edit_agenda svg .fill, .back_agenda svg .fill {
     fill: #fff;
 }
-.new_agenda span {
+.new_agenda span, .edit_agenda span, .back_agenda span {
     font-family: 'Gloria Hallelujah', cursive;
+}
+.show-list {
+  display: block;
+  margin: auto;
+  width: 30%;
+  border: 1px solid #d6c7e3;
+  border-radius: 10px;
+}
+.show-list ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.show-list ul li {
+  border-bottom: 1px solid #d6c7e3;
+}
+.show-list ul li:last-child {
+  border-bottom: 0px;
+}
+.show-list ul li p {
+  margin: 0px;
+  padding: 10px 0 10px 20px;
 }
