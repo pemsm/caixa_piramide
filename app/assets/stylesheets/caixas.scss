@@ -100,14 +100,16 @@ svg .fill {
   font-family: 'Gloria Hallelujah', cursive;
   color: #9756a3;
   padding-top: 25px;
-  text-shadow: 2px 2px  rgba(44,62,80,0.15);
+  text-shadow: 1px 2px  rgba(44,62,80,0.15);
 }
 .new_agenda, .edit_agenda, .back_agenda {
   position:absolute;
   width: 150px;
   background-color: #9756a3;
   color: #fff;
+  border: 0px;
   border-radius: 10px;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
   font-weight: normal;
   -webkit-transition:all .3s ease-out;
   -moz-transition:all .3s ease-out;
