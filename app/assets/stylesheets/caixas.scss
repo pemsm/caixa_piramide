@@ -4,14 +4,14 @@
 table {
   width: 100%;
 }
-tbody tr:hover {
-  background-color: #eee8f3;
-}
 thead tr {
   border-top: 1px solid #d6c7e3;
 }
 thead tr th {
   font-size: 14px;
+}
+tbody tr:hover {
+  background-color: #eee8f3;
 }
 th, td {
   border-bottom: 1px solid #d6c7e3;
@@ -48,10 +48,10 @@ button {
   background-color: #4caf4f;
 }
 .edit {
-  background-color: #f4a460;
+  background-color: #5894ef;
 }
 .destroy {
-  background-color: #f34337;
+  background-color: #ff4c4c;
 }
 .show:hover {
   background-color: #fff;
@@ -59,11 +59,11 @@ button {
 }
 .edit:hover {
   background-color: #fff;
-  border: 1px solid #f4a460;
+  border: 1px solid #5894ef;
 }
 .destroy:hover {
   background-color: #fff;
-  border: 1px solid #f34337;
+  border: 1px solid #ff4c4c;
 }
 svg {
   height: 18px;
@@ -77,10 +77,10 @@ svg .fill {
   fill: #4caf4f;
 }
 .edit:hover svg .fill {
-  fill: #f4a460;
+  fill: #5894ef;
 }
 .destroy:hover svg .fill {
-  fill: #f34337;
+  fill: #ff4c4c;
 }
 .tabela, #header {
   padding: 20px 0 20px 0 ;
@@ -100,6 +100,7 @@ svg .fill {
   font-family: 'Gloria Hallelujah', cursive;
   color: #9756a3;
   padding-top: 25px;
+  text-shadow: 2px 2px  rgba(44,62,80,0.15);
 }
 .new_agenda {
   position:absolute;
