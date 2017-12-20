@@ -1,0 +1,27 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  data: 2017-12-20 02:42:37
+  caixa_inicial: 1.5
+  dinheiro: 1.5
+  saida: 1.5
+  descricao: MyText
+  cheque: 1.5
+  maquineta_loja: 1.5
+  maquineta_motoboy: 1.5
+  cappta: 1.5
+  mundipagg: 1.5
+  caixa_final: 1.5
+
+two:
+  data: 2017-12-20 02:42:37
+  caixa_inicial: 1.5
+  dinheiro: 1.5
+  saida: 1.5
+  descricao: MyText
+  cheque: 1.5
+  maquineta_loja: 1.5
+  maquineta_motoboy: 1.5
+  cappta: 1.5
+  mundipagg: 1.5
+  caixa_final: 1.5

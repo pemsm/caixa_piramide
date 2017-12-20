@@ -1,0 +1,72 @@
+<%= form_with(model: caixa, local: true) do |form| %>
+  <% if caixa.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(caixa.errors.count, "error") %> prohibited this caixa from being saved:</h2>
+
+      <ul>
+      <% caixa.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :data %>
+    <%= form.datetime_select :data, id: :caixa_data %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caixa_inicial %>
+    <%= form.text_field :caixa_inicial, id: :caixa_caixa_inicial %>
+  </div>
+
+  <div class="field">
+    <%= form.label :dinheiro %>
+    <%= form.text_field :dinheiro, id: :caixa_dinheiro %>
+  </div>
+
+  <div class="field">
+    <%= form.label :saida %>
+    <%= form.text_field :saida, id: :caixa_saida %>
+  </div>
+
+  <div class="field">
+    <%= form.label :descricao %>
+    <%= form.text_area :descricao, id: :caixa_descricao %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cheque %>
+    <%= form.text_field :cheque, id: :caixa_cheque %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maquineta_loja %>
+    <%= form.text_field :maquineta_loja, id: :caixa_maquineta_loja %>
+  </div>
+
+  <div class="field">
+    <%= form.label :maquineta_motoboy %>
+    <%= form.text_field :maquineta_motoboy, id: :caixa_maquineta_motoboy %>
+  </div>
+
+  <div class="field">
+    <%= form.label :cappta %>
+    <%= form.text_field :cappta, id: :caixa_cappta %>
+  </div>
+
+  <div class="field">
+    <%= form.label :mundipagg %>
+    <%= form.text_field :mundipagg, id: :caixa_mundipagg %>
+  </div>
+
+  <div class="field">
+    <%= form.label :caixa_final %>
+    <%= form.text_field :caixa_final, id: :caixa_caixa_final %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>

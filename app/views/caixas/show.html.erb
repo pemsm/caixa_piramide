@@ -1,0 +1,59 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Data:</strong>
+  <%= @caixa.data %>
+</p>
+
+<p>
+  <strong>Caixa inicial:</strong>
+  <%= @caixa.caixa_inicial %>
+</p>
+
+<p>
+  <strong>Dinheiro:</strong>
+  <%= @caixa.dinheiro %>
+</p>
+
+<p>
+  <strong>Saida:</strong>
+  <%= @caixa.saida %>
+</p>
+
+<p>
+  <strong>Descricao:</strong>
+  <%= @caixa.descricao %>
+</p>
+
+<p>
+  <strong>Cheque:</strong>
+  <%= @caixa.cheque %>
+</p>
+
+<p>
+  <strong>Maquineta loja:</strong>
+  <%= @caixa.maquineta_loja %>
+</p>
+
+<p>
+  <strong>Maquineta motoboy:</strong>
+  <%= @caixa.maquineta_motoboy %>
+</p>
+
+<p>
+  <strong>Cappta:</strong>
+  <%= @caixa.cappta %>
+</p>
+
+<p>
+  <strong>Mundipagg:</strong>
+  <%= @caixa.mundipagg %>
+</p>
+
+<p>
+  <strong>Caixa final:</strong>
+  <%= @caixa.caixa_final %>
+</p>
+
+<%= link_to 'Edit', edit_caixa_path(@caixa) %> |
+<%= link_to 'Back', caixas_path %>
