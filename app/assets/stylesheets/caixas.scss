@@ -135,8 +135,13 @@ svg .fill {
 .button_agenda span, #input_new_agenda, #input_clear_agenda {
     font-family: 'Gloria Hallelujah', cursive;
 }
-.new_agenda, .back_agenda, .edit_agenda {
-  right: 128px;
+.new_agenda, .back_agenda {
+  top: 105px;
+  right: 20px;
+}
+.edit_agenda, .show_agenda {
+  top: 105px;
+  right: 180px;  
 }
 .show-list {
   display: block;
