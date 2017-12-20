@@ -5,7 +5,7 @@ table {
   width: 100%;
 }
 thead tr {
-  border-top: 1px solid #d6c7e3;
+  border-top: 1px solid #9756a3;
 }
 thead tr th {
   font-size: 14px;
@@ -14,7 +14,7 @@ tbody tr:hover {
   background-color: #eee8f3;
 }
 th, td {
-  border-bottom: 1px solid #d6c7e3;
+  border-bottom: 1px solid #9756a3;
 }
 th {
   text-align: center !important;
@@ -82,18 +82,21 @@ svg .fill {
 .destroy:hover svg .fill {
   fill: #ff4c4c;
 }
-.tabela, #header {
-  padding: 15px 0 15px 0 ;
+.tabela, form {
+  padding: 20px 0 20px 0;
+}
+#header {
+  padding: 30px 0 20px 0;
 }
 #watercolor {
   width: 220px;
-  height: 120px;
+  height: 110px;
 }
 #logo {
   width: 170px;
   z-index: 95;
   position: absolute;
-  top: 25px;
+  top: 20px;
   left: 50px;
 }
 #titulo h1, #titulo h2 {
@@ -105,9 +108,9 @@ svg .fill {
 .button_agenda {
   position:absolute;
   width: 150px;
-  background-color: #9756a3;
-  color: #fff;
-  border: 0px;
+  background-color: #fff;
+  color: #9756a3;
+  border: 1px solid #9756a3;
   border-radius: 10px;
   box-shadow: 1px 2px rgba(44,62,80,0.15);
   font-weight: normal;
@@ -117,7 +120,7 @@ svg .fill {
   -o-transition:all .3s ease-out;
   transition:all .3s ease-out;
 }
-.button_agenda:hover {
+.button_agenda:hover, #input_new_agenda:hover, #input_clear_agenda:hover {
   -webkit-transform:translate(0px,-5px);
   -moz-transform:translate(0px,-5px);
   -ms-transform:translate(0px,-5px);
@@ -130,24 +133,28 @@ svg .fill {
    height: 20px;
 }
 .button_agenda svg .fill {
-    fill: #fff;
+    fill: #9756a3;
 }
 .button_agenda span, #input_new_agenda, #input_clear_agenda {
     font-family: 'Gloria Hallelujah', cursive;
 }
-.new_agenda, .back_agenda {
+.new_agenda {
   top: 105px;
   right: 20px;
 }
+.back_agenda {
+  top: 135px;
+  right: 140px;
+}
 .edit_agenda, .show_agenda {
-  top: 105px;
-  right: 180px;  
+  top: 135px;
+  right: 300px;  
 }
 .show-list {
   display: block;
-  margin-left: 50px;
+  margin: auto;
   width: 30%;
-  border: 1px solid #d6c7e3;
+  border: 1px solid #9756a3;
   border-radius: 10px;
 }
 .show-list ul {
@@ -156,7 +163,7 @@ svg .fill {
   margin: 0px;
 }
 .show-list ul li {
-  border-bottom: 1px solid #d6c7e3;
+  border-bottom: 1px solid #9756a3;
 }
 .show-list ul li:last-child {
   border-bottom: 0px;
@@ -167,9 +174,10 @@ svg .fill {
 }
 .form-caixa {
   display: block;
-  margin-left: 50px;
+  margin: auto;
   width: 80%;
-  border: 1px solid #d6c7e3;
+  border: 1px solid #9756a3;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
   border-radius: 10px;
 }
 .form-caixa p {
@@ -178,7 +186,7 @@ svg .fill {
 }
 #caixa_data,#caixa_caixa_inicial,#caixa_dinheiro,#caixa_saida,#caixa_descricao,#caixa_cheque,#caixa_maquineta_loja,#caixa_maquineta_motoboy,#caixa_cappta,#caixa_mundipagg,#caixa_caixa_final {
   border-radius: 5px;
-  border: 1px solid #d6c7e3;
+  border: 1px solid #9756a3;
   box-shadow: 1px 2px rgba(44,62,80,0.15);
 }
 #input_new_agenda, #input_clear_agenda {
