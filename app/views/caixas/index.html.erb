@@ -36,6 +36,21 @@
       <tbody>
         <% @caixas.each do |caixa| %>
         <tr>
+          
+          <!-- Ajuste de Valores Nulos para zero -->
+          
+          <% unless caixa.caixa_inicial.is_a? Float; caixa.caixa_inicial = 0 end %>
+          <% unless caixa.dinheiro.is_a? Float; caixa.dinheiro = 0 end %>
+          <% unless caixa.saida.is_a? Float; caixa.saida = 0 end %>
+          <% unless caixa.cheque.is_a? Float; caixa.cheque = 0 end %>
+          <% unless caixa.maquineta_loja.is_a? Float; caixa.maquineta_loja = 0 end  %>
+          <% unless caixa.maquineta_motoboy.is_a? Float; caixa.maquineta_motoboy = 0 end  %>
+          <% unless caixa.cappta.is_a? Float; caixa.cappta = 0 end  %>
+          <% unless caixa.mundipagg.is_a? Float; caixa.mundipagg = 0 end  %>
+          <% unless caixa.caixa_final.is_a? Float; caixa.caixa_final.saida = 0 end %>
+          
+          <!-- --------------------------------- -->
+          
           <td><%= caixa.data.strftime("%d/%m/%Y") %></td>
           <td><%= caixa.caixa_inicial %></td>
           <td><%= caixa.dinheiro %></td>

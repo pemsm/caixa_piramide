@@ -12,7 +12,7 @@ class CreateCaixas < ActiveRecord::Migration[5.1]
       t.float :cappta
       t.float :mundipagg
       t.float :caixa_final
-
+      
       t.timestamps
     end
   end
