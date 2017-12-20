@@ -44,43 +44,43 @@ button {
   -o-transition:all 0.3s ease-out;
   transition:all 0.3s ease-out;
 }
-.show {
-  background-color: #4caf4f;
-}
-.edit {
-  background-color: #5894ef;
-}
-.destroy {
-  background-color: #ff4c4c;
-}
-.show:hover {
+.show{
   background-color: #fff;
   border: 1px solid #4caf4f;
 }
-.edit:hover {
+.edit {
   background-color: #fff;
   border: 1px solid #5894ef;
 }
-.destroy:hover {
+.destroy {
   background-color: #fff;
   border: 1px solid #ff4c4c;
+}
+.show:hover {
+  background-color: #4caf4f;
+}
+.edit:hover {
+  background-color: #5894ef;
+}
+.destroy:hover  {
+  background-color: #ff4c4c;
 }
 svg {
   height: 18px;
   width: 18px;
   vertical-align: middle;
 }
-svg .fill {
-  fill: #fff;
-}
-.show:hover svg .fill {
+.show svg .fill {
   fill: #4caf4f;
 }
-.edit:hover svg .fill {
+.edit svg .fill {
   fill: #5894ef;
 }
-.destroy:hover svg .fill {
+.destroy svg .fill {
   fill: #ff4c4c;
+}
+.show:hover svg .fill, .edit:hover svg .fill, .destroy:hover svg .fill {
+  fill: #fff;
 }
 .tabela, form {
   padding: 20px 0 20px 0;
