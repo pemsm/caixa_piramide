@@ -1,3 +1,134 @@
-// Place all the styles related to the Caixas controller here.
+// Place all the styles related to the Agendas controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  width: 100%;
+}
+tbody tr:hover {
+  background-color: #eee8f3;
+}
+thead tr {
+  border-top: 1px solid #d6c7e3;
+}
+thead tr th {
+  font-size: 14px;
+}
+th, td {
+  border-bottom: 1px solid #d6c7e3;
+}
+th {
+  text-align: center !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+td {
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+a {
+  text-decoration: none;
+}
+button {
+  cursor: pointer;
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+}
+.show, .edit, .destroy {
+  border-radius:20%;
+  -webkit-transition:all 0.3s ease-out;
+  -moz-transition:all 0.3s ease-out;
+  -ms-transition:all 0.3s ease-out;
+  -o-transition:all 0.3s ease-out;
+  transition:all 0.3s ease-out;
+}
+.show {
+  background-color: #4caf4f;
+}
+.edit {
+  background-color: #f4a460;
+}
+.destroy {
+  background-color: #f34337;
+}
+.show:hover {
+  background-color: #fff;
+  border: 1px solid #4caf4f;
+}
+.edit:hover {
+  background-color: #fff;
+  border: 1px solid #f4a460;
+}
+.destroy:hover {
+  background-color: #fff;
+  border: 1px solid #f34337;
+}
+svg {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+}
+svg .fill {
+  fill: #fff;
+}
+.show:hover svg .fill {
+  fill: #4caf4f;
+}
+.edit:hover svg .fill {
+  fill: #f4a460;
+}
+.destroy:hover svg .fill {
+  fill: #f34337;
+}
+.tabela, #header {
+  padding: 20px 0 20px 0 ;
+}
+#watercolor {
+  width: 220px;
+  height: 120px;
+}
+#logo {
+  width: 170px;
+  z-index: 95;
+  position: absolute;
+  top: 25px;
+  left: 50px;
+}
+#titulo h1 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #9756a3;
+  padding-top: 25px;
+}
+.new_agenda {
+  position:absolute;
+  width: 150px;
+  background-color: #9756a3;
+  color: #fff;
+  border-radius: 10px;
+  font-weight: normal;
+  -webkit-transition:all .3s ease-out;
+  -moz-transition:all .3s ease-out;
+  -ms-transition:all .3s ease-out;
+  -o-transition:all .3s ease-out;
+  transition:all .3s ease-out;
+}
+.new_agenda:hover {
+  -webkit-transform:translate(0px,-5px);
+  -moz-transform:translate(0px,-5px);
+  -ms-transform:translate(0px,-5px);
+  -o-transform:translate(0px,-5px);
+  transform:translate(0px,-5px);
+}
+.new_agenda svg {
+   margin: 0 8px 3px 0;
+   width: 20px;
+   height: 20px;
+}
+.new_agenda svg .fill {
+    fill: #fff;
+}
+.new_agenda span {
+    font-family: 'Gloria Hallelujah', cursive;
+}

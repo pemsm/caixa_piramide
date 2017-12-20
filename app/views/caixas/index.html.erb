@@ -1,47 +1,59 @@
 <p id="notice"><%= notice %></p>
 
-<h1>Caixas</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Data</th>
-      <th>Caixa inicial</th>
-      <th>Dinheiro</th>
-      <th>Saida</th>
-      <th>Descricao</th>
-      <th>Cheque</th>
-      <th>Maquineta loja</th>
-      <th>Maquineta motoboy</th>
-      <th>Cappta</th>
-      <th>Mundipagg</th>
-      <th>Caixa final</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @caixas.each do |caixa| %>
-      <tr>
-        <td><%= caixa.data %></td>
-        <td><%= caixa.caixa_inicial %></td>
-        <td><%= caixa.dinheiro %></td>
-        <td><%= caixa.saida %></td>
-        <td><%= caixa.descricao %></td>
-        <td><%= caixa.cheque %></td>
-        <td><%= caixa.maquineta_loja %></td>
-        <td><%= caixa.maquineta_motoboy %></td>
-        <td><%= caixa.cappta %></td>
-        <td><%= caixa.mundipagg %></td>
-        <td><%= caixa.caixa_final %></td>
-        <td><%= link_to 'Show', caixa %></td>
-        <td><%= link_to 'Edit', edit_caixa_path(caixa) %></td>
-        <td><%= link_to 'Destroy', caixa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
-
-<br>
-
-<%= link_to 'New Caixa', new_caixa_path %>
+<div class="container">
+  <div class="row" id="header">
+    <div class="col-sm-4">
+      <%= image_tag("purple.png", :alt => "watercolor", :id => "watercolor") %>
+      <div class="logo">
+        <%= image_tag("logo_cut.png", :alt => "logo", :id => "logo") %>
+      </div>
+    </div>
+    <div class="col" id="titulo">
+      <h1>Caixas Diários</h1>
+    </div>
+  </div>
+  
+  <div class="tabela">
+    <table cellspacing="0">
+      <thead>
+        <tr>
+          <th>Data</th>
+          <th>Caixa inicial</th>
+          <th>Dinheiro</th>
+          <th>Saida</th>
+          <th>Descricao</th>
+          <th>Cheque</th>
+          <th>Maquineta loja</th>
+          <th>Maquineta motoboy</th>
+          <th>Cappta</th>
+          <th>Mundipagg</th>
+          <th>Caixa final</th>
+          <th colspan="3"></th>
+        </tr>
+      </thead>
+      
+      <tbody>
+        <% @caixas.each do |caixa| %>
+        <tr>
+          <td><%= caixa.data.strftime("%d/%m/%Y") %></td>
+          <td><%= caixa.caixa_inicial %></td>
+          <td><%= caixa.dinheiro %></td>
+          <td><%= caixa.saida %></td>
+          <td><%= caixa.descricao %></td>
+          <td><%= caixa.cheque %></td>
+          <td><%= caixa.maquineta_loja %></td>
+          <td><%= caixa.maquineta_motoboy %></td>
+          <td><%= caixa.cappta %></td>
+          <td><%= caixa.mundipagg %></td>
+          <td><%= caixa.caixa_final %></td>
+          <td><%= link_to '<button class="show"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path class="fill" d="M51.6,96.7c11,0,21-3.9,28.8-10.5l35,35c0.8,0.8,1.8,1.2,2.9,1.2s2.1-0.4,2.9-1.2c1.6-1.6,1.6-4.2,0-5.8l-35-35   c6.5-7.8,10.5-17.9,10.5-28.8c0-24.9-20.2-45.1-45.1-45.1C26.8,6.5,6.5,26.8,6.5,51.6C6.5,76.5,26.8,96.7,51.6,96.7z M51.6,14.7   c20.4,0,36.9,16.6,36.9,36.9C88.5,72,72,88.5,51.6,88.5c-20.4,0-36.9-16.6-36.9-36.9C14.7,31.3,31.3,14.7,51.6,14.7z"/></g></svg></button>'.html_safe, caixa %></td>
+          <td><%= link_to '<button class="edit"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path class="fill" d="m119.2,114.3h-109.4c-2.3,0-4.1,1.9-4.1,4.1s1.9,4.1 4.1,4.1h109.5c2.3,0 4.1-1.9 4.1-4.1s-1.9-4.1-4.2-4.1z"/><path class="fill" d="m5.7,78l-.1,19.5c0,1.1 0.4,2.2 1.2,3 0.8,0.8 1.8,1.2 2.9,1.2l19.4-.1c1.1,0 2.1-0.4 2.9-1.2l67-67c1.6-1.6 1.6-4.2 0-5.9l-19.2-19.4c-1.6-1.6-4.2-1.6-5.9-1.77636e-15l-13.4,13.5-53.6,53.5c-0.7,0.8-1.2,1.8-1.2,2.9zm71.2-61.1l13.5,13.5-7.6,7.6-13.5-13.5 7.6-7.6zm-62.9,62.9l49.4-49.4 13.5,13.5-49.4,49.3-13.6,.1 .1-13.5z"/></g></svg></button>'.html_safe, edit_caixa_path(caixa) %></td>
+          <td><%= link_to '<button class="destroy"><svg version="1.1" id="Capa_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"width="774.266px" height="774.266px" viewBox="0 0 774.266 774.266" style="enable-background:new 0 0 774.266 774.266;"xml:space="preserve"><g><path class="fill" d="M640.35,91.169H536.971V23.991C536.971,10.469,526.064,0,512.543,0c-1.312,0-2.187,0.438-2.614,0.875 C509.491,0.438,508.616,0,508.179,0H265.212h-1.74h-1.75c-13.521,0-23.99,10.469-23.99,23.991v67.179H133.916 c-29.667,0-52.783,23.116-52.783,52.783v38.387v47.981h45.803v491.6c0,29.668,22.679,52.346,52.346,52.346h415.703 c29.667,0,52.782-22.678,52.782-52.346v-491.6h45.366v-47.981v-38.387C693.133,114.286,670.008,91.169,640.35,91.169z M285.713,47.981h202.84v43.188h-202.84V47.981z M599.349,721.922c0,3.061-1.312,4.363-4.364,4.363H179.282 c-3.052,0-4.364-1.303-4.364-4.363V230.32h424.431V721.922z M644.715,182.339H129.551v-38.387c0-3.053,1.312-4.802,4.364-4.802 H640.35c3.053,0,4.365,1.749,4.365,4.802V182.339z"/><rect class="fill" x="475.031" y="286.593" width="48.418" height="396.942"/><rect class="fill" x="363.361" y="286.593" width="48.418" height="396.942"/><rect class="fill" x="251.69" y="286.593" width="48.418" height="396.942"/></g></svg></button>'.html_safe, caixa, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        </tr>
+        <% end %>
+      </tbody>
+    </table>
+  </div>
+  <br>
+  <%= link_to '<button class="new_agenda float"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path class="fill" d="M64.5,6.5c-32,0-58.1,26-58.1,58s26,58,58.1,58c32,0,58-26,58-58S96.5,6.5,64.5,6.5z M64.5,114.4    C37,114.4,14.6,92,14.6,64.5S37,14.6,64.5,14.6c27.5,0,49.9,22.4,49.9,49.9S92,114.4,64.5,114.4z"/><path class="fill" d="m91.2,59.9h-22.6v-22.7c0-2.3-1.8-4.1-4.1-4.1-2.3,0-4.1,1.8-4.1,4.1v22.6h-22.6c-2.3,0-4.1,1.8-4.1,4.1s1.8,4.1 4.1,4.1h22.6v22.6c0,2.3 1.8,4.1 4.1,4.1 2.3,0 4.1-1.8 4.1-4.1v-22.6h22.6c2.3,0 4.1-1.8 4.1-4.1s-1.8-4-4.1-4z"/></g></svg><span>Novo Caixa</span></button>'.html_safe, new_caixa_path %>
+</div>
