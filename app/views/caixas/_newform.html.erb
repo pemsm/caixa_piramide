@@ -10,10 +10,15 @@
   </ul>
 </div>
 <% end %>
-
-<div class="form-caixa">
+<div class="navbar">
+  <div class="tab">
+    <button class="tablinks" id="defaultOpen" onclick="openTab(event, 'geral')">Geral</button>
+    <button class="tablinks" id="navDesc" onclick="openTab(event, 'descricao')">Descrição</button>
+    <button class="tablinks" id="navAnexos" onclick="openTab(event, 'anexos')">Anexos</button>
+  </div>
+</div>
+<div class="form-caixa tabcontent" id="geral">
   <div class="row">
-    
     <div class="col">
       <div class="field">
         <p>
@@ -115,7 +120,14 @@
       </div>
     </div>
   </div>
-  
+</div>
+<div id="descricao" class="tabcontent">
+  <h3>Paris</h3>
+  <p>Paris is the capital of France.</p> 
 </div>
 
+<div id="anexos" class="tabcontent">
+  <h3>Tokyo</h3>
+  <p>Tokyo is the capital of Japan.</p>
+</div>
 <% end %>
