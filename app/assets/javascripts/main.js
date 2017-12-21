@@ -51,6 +51,8 @@ function openTab(event, tabName) {
   event.currentTarget.className += " active";
 }
 
-window.ready = function(){ 
-    document.getElementById("defaultOpen").click();
-};
+
+
+
+
+

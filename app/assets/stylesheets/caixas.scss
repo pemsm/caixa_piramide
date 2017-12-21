@@ -186,18 +186,12 @@ svg {
 }
 .tab {
   overflow: hidden;
-  animation: fadeEffect 1s;
 }
 .tab a.active {
     background-color: #eee8f3;
 }
 .tabcontent {
     display: none;
-    animation: fadeEffect 1s;
-}
-@keyframes fadeEffect {
-    from {opacity: 0;}
-    to {opacity: 1;}
 }
 .form-caixa {
   display: block;
@@ -241,7 +235,7 @@ svg {
   border: 1px solid #ff4c4c;
 }
 .navbar {
-  height: 48px;
+  height: 50px;
 }
 .navbar a {
   position: absolute;
@@ -253,6 +247,7 @@ svg {
   background-color: #fff;
   color: #9756a3 !important;
   border: 1px solid #9756a3;
+  border-bottom: 0px;
   border-radius: 10px 10px 0 0;
   cursor: pointer;
 }
