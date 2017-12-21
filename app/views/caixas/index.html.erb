@@ -28,15 +28,14 @@
           <th onclick="sortTable(7)">Cappta</th>
           <th onclick="sortTable(8)">Mundipagg</th>
           <th onclick="sortTable(9)">Caixa Final</th>
-          <th onclick="sortTable(10)">Total</th>
+          <th onclick="sortTable(10)">Total Diário</th>
           <th colspan="3"></th>
         </tr>
       </thead>
       
       <tbody>
         <% @caixas.each do |caixa| %>
-        <tr>
-          
+        
           <!-- Ajuste de Valores Nulos para zero -->
           
           <% unless caixa.caixa_inicial.is_a? Float; caixa.caixa_inicial = 0 end %>
@@ -50,7 +49,8 @@
           <% unless caixa.caixa_final.is_a? Float; caixa.caixa_final = 0 end %>
           
           <!------------------------------------>
-          
+        
+        <tr> 
           <td><%= caixa.data.strftime("%d/%m/%Y") %></td>
           <td><%= caixa.caixa_inicial %></td>
           <td><%= caixa.dinheiro %></td>
@@ -68,6 +68,16 @@
         </tr>
         <% end %>
       </tbody>
+      
+      <tfoot>
+        <tr>
+          <td>Total:</td>
+          <td colspan="9"></td>
+          <td>200</td>
+          <td colspan="3"></td>
+        </tr>
+      </tfoot>
+      
     </table>
   </div>
   <br>

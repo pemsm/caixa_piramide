@@ -6,17 +6,19 @@ function sortTable(n) {
   while (switching) {
     switching = false;
     rows = table.getElementsByTagName("TR");
-    for (i = 1; i < (rows.length - 1); i++) {
+    for (i = 1; i < (rows.length - 2); i++) {
       shouldSwitch = false;
       x = rows[i].getElementsByTagName("TD")[n];
       y = rows[i + 1].getElementsByTagName("TD")[n];
+      var prevToFloat = parseFloat(x.innerHTML.toLowerCase());
+      var nextToFloat = parseFloat(y.innerHTML.toLowerCase());
       if (dir == "asc") {
-        if (x.innerHTML.toLowerCase() > y.innerHTML.toLowerCase()) {
+        if (prevToFloat > nextToFloat) {
           shouldSwitch= true;
           break;
         }
       } else if (dir == "desc") {
-        if (x.innerHTML.toLowerCase() < y.innerHTML.toLowerCase()) {
+        if (prevToFloat < nextToFloat) {
           shouldSwitch= true;
           break;
         }
