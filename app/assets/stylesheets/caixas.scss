@@ -13,16 +13,13 @@ thead tr th {
 tbody tr:hover {
   background-color: #eee8f3;
 }
+th {
+  cursor: pointer;
+}
 th, td {
   border-bottom: 1px solid #9756a3;
 }
-th {
-  text-align: center !important;
-  font-size: 14px;
-  font-weight: bold;
-  cursor: pointer;
-}
-tfoot td span {
+th, tfoot td span  {
   text-align: center !important;
   font-size: 14px;
   font-weight: bold;
@@ -44,6 +41,7 @@ button {
 }
 .show, .edit, .destroy {
   border-radius:20%;
+  box-shadow: 1px 2px  rgba(44,62,80,0.15);
   -webkit-transition:all 0.3s ease-out;
   -moz-transition:all 0.3s ease-out;
   -ms-transition:all 0.3s ease-out;
@@ -53,17 +51,14 @@ button {
 .show{
   background-color: #fff;
   border: 1px solid #4caf4f;
-  box-shadow: 1px 2px  rgba(44,62,80,0.15);
 }
 .edit {
   background-color: #fff;
   border: 1px solid #5894ef;
-  box-shadow: 1px 2px  rgba(44,62,80,0.15);
 }
 .destroy {
   background-color: #fff;
   border: 1px solid #ff4c4c;
-  box-shadow: 1px 2px  rgba(44,62,80,0.15);
 }
 .show:hover {
   background-color: #4caf4f;
@@ -194,10 +189,10 @@ svg {
   overflow: hidden;
 }
 .tab a.active {
-    background-color: #eee8f3;
+  background-color: #eee8f3;
 }
 .tabcontent {
-    display: none;
+  display: none;
 }
 .form-caixa {
   display: block;
@@ -262,7 +257,4 @@ svg {
 }
 #navDesc {
   left: 250px;
-}
-#navAnexos {
-  left: 350px;
 }
