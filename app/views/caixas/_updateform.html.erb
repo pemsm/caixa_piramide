@@ -10,16 +10,20 @@
   </ul>
 </div>
 <% end %>
-
-<div class="form-caixa">
+<div class="navbar">
+  <div class="tab">
+    <a class="tablinks active" id="defaultOpen" onclick="openTab(event, 'geral')">Geral</a>
+    <a class="tablinks" id="navDesc" onclick="openTab(event, 'descricao')">Descrição</a>
+</div>
+</div>
+<div class="form-caixa tabcontent" id="geral">
   <div class="row">
-    
     <div class="col">
       <div class="field">
         <p>
           <strong>
             <%= form.label :data, :value => 'Data' %><br/>
-            <%= form.datetime_select :data, id: :caixa_data %>
+            <%= form.datetime_select :data, :order => [:day, :month, :year], :discard_hour => true, id: :caixa_data %>
           </strong>
         </p> 
       </div>
@@ -53,14 +57,6 @@
       <div class="field">
         <p>
           <strong>
-            <%= form.label :descricao, :value => 'Descrição' %><br/>
-            <%= form.text_area :descricao, id: :caixa_descricao %>
-          </strong>
-        </p>
-      </div>
-      <div class="field">
-        <p>
-          <strong>
             <%= form.label :cheque, :value => 'Cheque' %><br/>
             <%= form.text_field :cheque, id: :caixa_cheque %>
           </strong>
@@ -82,9 +78,6 @@
           </strong>
         </p>
       </div>
-    </div>
-   
-    <div class="col">
       <div class="field">
         <p>
           <strong>
@@ -93,6 +86,9 @@
           </strong>
         </p>
       </div>
+    </div>
+   
+    <div class="col">
       <div class="field">
         <p>
           <strong>
@@ -115,7 +111,17 @@
       </div>
     </div>
   </div>
-  
+</div>
+
+<div id="descricao" class="tabcontent form-caixa-hidden">
+  <div class="field">
+    <p>
+      <strong>
+        <%= form.label :descricao, :value => 'Descrição' %><br/>
+        <%= form.text_area :descricao, id: :caixa_descricao %>
+      </strong>
+    </p>
+  </div>
 </div>
 
 <% end %>

@@ -23,7 +23,7 @@
         <p>
           <strong>
             <%= form.label :data, :value => 'Data' %><br/>
-            <%= form.datetime_select :data, id: :caixa_data %>
+            <%= form.datetime_select :data, :order => [:day, :month, :year], :discard_hour => true, id: :caixa_data %>
           </strong>
         </p> 
       </div>
@@ -57,14 +57,6 @@
       <div class="field">
         <p>
           <strong>
-            <%= form.label :descricao, :value => 'Descrição' %><br/>
-            <%= form.text_area :descricao, id: :caixa_descricao %>
-          </strong>
-        </p>
-      </div>
-      <div class="field">
-        <p>
-          <strong>
             <%= form.label :cheque, :value => 'Cheque' %><br/>
             <%= form.text_field :cheque, id: :caixa_cheque %>
           </strong>
@@ -86,9 +78,6 @@
           </strong>
         </p>
       </div>
-    </div>
-   
-    <div class="col">
       <div class="field">
         <p>
           <strong>
@@ -97,6 +86,9 @@
           </strong>
         </p>
       </div>
+    </div>
+   
+    <div class="col">
       <div class="field">
         <p>
           <strong>
@@ -122,8 +114,14 @@
 </div>
 
 <div id="descricao" class="tabcontent form-caixa-hidden">
-  <h3>Paris</h3>
-  <p>Paris is the capital of France.</p> 
+  <div class="field">
+    <p>
+      <strong>
+        <%= form.label :descricao, :value => 'Descrição' %><br/>
+        <%= form.text_area :descricao, id: :caixa_descricao %>
+      </strong>
+    </p>
+  </div>
 </div>
 
 <% end %>

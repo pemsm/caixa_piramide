@@ -14,7 +14,7 @@
 
   <div class="show-list">
     <ul>
-      <li><p><strong>Data: </strong> R$ <%= @caixa.data.strftime("%d/%m/%Y - %H:%M") %></p></li>
+      <li><p><strong>Data: </strong> <%= @caixa.data.strftime("%d/%m/%Y") %></p></li>
       
       <li><p><strong>Caixa Inicial: </strong> R$ <%= @caixa.caixa_inicial %></p></li>
       
@@ -35,6 +35,8 @@
       <li><p><strong>Mundipagg: </strong> R$ <%= @caixa.mundipagg %></p></li>
       
       <li><p><strong>Caixa Final: </strong> R$ <%= @caixa.caixa_final %></p></li>
+      
+      <li><p><strong>Total Diário: </strong> R$ </p></li>
     
     </ul>
   </div>      
