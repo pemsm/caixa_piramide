@@ -145,15 +145,15 @@ svg {
     font-family: 'Gloria Hallelujah', cursive;
 }
 .new_agenda {
-  top: 105px;
+  top: 129px;
   right: 20px;
 }
 .back_agenda {
-  top: 135px;
+  top: 159px;
   right: 140px;
 }
 .edit_agenda, .show_agenda {
-  top: 135px;
+  top: 159px;
   right: 300px;  
 }
 .show-list {
@@ -291,16 +291,16 @@ svg {
 }
 #searchInput {
     background-image: url(search.png); 
-    background-position: 10px 12px; 
+    background-position: 10px 6px; 
     background-repeat: no-repeat;
     color: #000;
     width: 30%;
-    font-size: 16px; 
-    padding: 12px 20px 12px 40px;
+    font-size: 18px; 
+    padding: 6px 20px 6px 40px;
     border: 1px solid #9756a3;
     border-radius: 10px;
-    margin-bottom: 12px;
+    box-shadow: 1px 2px rgba(44,62,80,0.15);
 }
 #searchInput::placeholder {
-  color: #bba3d0;
+  color: #9756a3;
 }
