@@ -118,6 +118,7 @@ svg {
   border: 1px solid #9756a3;
   border-radius: 10px;
   box-shadow: 1px 2px rgba(44,62,80,0.15);
+  font-size: 18px;
   font-weight: normal;
   -webkit-transition:all .3s ease-out;
   -moz-transition:all .3s ease-out;
@@ -125,7 +126,7 @@ svg {
   -o-transition:all .3s ease-out;
   transition:all .3s ease-out;
 }
-.button_agenda:hover, #input_new_agenda:hover, #input_clear_agenda:hover {
+.button_agenda:hover, #input_new_agenda:hover, #input_clear_agenda:hover, #input_refresh_agenda:hover, #input_undo_agenda:hover {
   -webkit-transform:translate(0px,-5px);
   -moz-transform:translate(0px,-5px);
   -ms-transform:translate(0px,-5px);
@@ -134,13 +135,13 @@ svg {
 }
 .button_agenda svg {
    margin: 0 8px 3px 0;
-   width: 20px;
-   height: 20px;
+   width: 24px;
+   height: 24px;
 }
 .button_agenda svg .fill {
     fill: #9756a3;
 }
-.button_agenda span, #input_new_agenda, #input_clear_agenda {
+.button_agenda span, #input_new_agenda, #input_clear_agenda, #input_refresh_agenda, #input_undo_agenda {
     font-family: 'Gloria Hallelujah', cursive;
 }
 .new_agenda {
@@ -215,7 +216,7 @@ svg {
   height: 300px;
   width: 250px;
 }
-#input_new_agenda, #input_clear_agenda {
+#input_new_agenda, #input_clear_agenda, #input_refresh_agenda, #input_undo_agenda {
   cursor: pointer;
   height: 34px;
   position:absolute;
@@ -224,6 +225,7 @@ svg {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 1px 2px rgba(44,62,80,0.15);
+  font-size: 18px;
   font-weight: normal;
   -webkit-transition:all .3s ease-out;
   -moz-transition:all .3s ease-out;
@@ -234,19 +236,43 @@ svg {
 #input_new_agenda {
   color: #4caf4f;
   border: 1px solid #4caf4f;
+  background-image: url(add.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
 }
 #input_clear_agenda  {
   color: #ff4c4c;
   border: 1px solid #ff4c4c;
+  background-image: url(remove.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 22px;
+}
+#input_refresh_agenda {
+  color: #4caf4f;
+  border: 1px solid #4caf4f;
+  background-image: url(refresh.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 38px;
+}
+#input_undo_agenda {
+  color: #ff4c4c;
+  border: 1px solid #ff4c4c;
+  background-image: url(cancel.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 34px;
 }
 .navbar {
-  height: 50px;
+  height: 60px;
 }
 .navbar a {
   position: absolute;
   text-align: center;
   font-family: 'Gloria Hallelujah', cursive;
-  height: 25px;
+  font-size: 18px;
+  height: 30px;
   outline: none;
   background-color: #fff;
   color: #9756a3 !important;
@@ -260,6 +286,21 @@ svg {
   left: 130px;
 }
 #navDesc {
-  width: 195px;
-  left: 212px;
+  width: 206px;
+  left: 218px;
+}
+#searchInput {
+    background-image: url(search.png); 
+    background-position: 10px 12px; 
+    background-repeat: no-repeat;
+    color: #000;
+    width: 30%;
+    font-size: 16px; 
+    padding: 12px 20px 12px 40px;
+    border: 1px solid #9756a3;
+    border-radius: 10px;
+    margin-bottom: 12px;
+}
+#searchInput::placeholder {
+  color: #bba3d0;
 }
