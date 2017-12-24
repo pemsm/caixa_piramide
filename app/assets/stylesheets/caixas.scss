@@ -303,4 +303,318 @@ svg {
 }
 #searchInput::placeholder {
   color: #9756a3;
+}// Place all the styles related to the Agendas controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+table {
+  width: 100%;
+}
+thead tr {
+  border-top: 1px solid #9756a3;
+}
+thead tr th {
+  font-size: 14px;
+}
+tbody tr:hover {
+  background-color: #eee8f3;
+}
+th {
+  cursor: pointer;
+}
+th, td {
+  border-bottom: 1px solid #9756a3;
+}
+th, tfoot td span  {
+  text-align: center !important;
+  font-size: 14px;
+  font-weight: bold;
+}
+td {
+  text-align: center;
+  padding: 5px 0 5px 0;
+}
+a {
+  text-decoration: none;
+}
+label {
+  font-size: 14px;
+  text-transform: capitalize;
+}
+button {
+  padding: 5px 5px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 12px;
+  cursor: pointer;
+}
+.show, .edit, .destroy {
+  border-radius:20%;
+  box-shadow: 1px 2px  rgba(44,62,80,0.15);
+  -webkit-transition:all 0.3s ease-out;
+  -moz-transition:all 0.3s ease-out;
+  -ms-transition:all 0.3s ease-out;
+  -o-transition:all 0.3s ease-out;
+  transition:all 0.3s ease-out;
+}
+.show{
+  background-color: #fff;
+  border: 1px solid #4caf4f;
+}
+.edit {
+  background-color: #fff;
+  border: 1px solid #5894ef;
+}
+.destroy {
+  background-color: #fff;
+  border: 1px solid #ff4c4c;
+}
+.show:hover {
+  background-color: #4caf4f;
+}
+.edit:hover {
+  background-color: #5894ef;
+}
+.destroy:hover  {
+  background-color: #ff4c4c;
+}
+svg {
+  height: 18px;
+  width: 18px;
+  vertical-align: middle;
+}
+.show svg .fill {
+  fill: #4caf4f;
+}
+.edit svg .fill {
+  fill: #5894ef;
+}
+.destroy svg .fill {
+  fill: #ff4c4c;
+}
+.show:hover svg .fill, .edit:hover svg .fill, .destroy:hover svg .fill {
+  fill: #fff;
+}
+.tabela, form {
+  padding: 20px 0 20px 0;
+  font-family: 'Nunito', sans-serif !important;
+}
+#header {
+  padding: 30px 0 20px 0;
+}
+#watercolor {
+  width: 220px;
+  height: 110px;
+}
+#logo {
+  width: 170px;
+  z-index: 95;
+  position: absolute;
+  top: 20px;
+  left: 50px;
+}
+#titulo h1, #titulo h2 {
+  font-family: 'Gloria Hallelujah', cursive;
+  color: #9756a3;
+  padding-top: 25px;
+  text-shadow: 1px 2px  rgba(44,62,80,0.15);
+}
+.button_agenda {
+  position:absolute;
+  width: 150px;
+  background-color: #fff;
+  color: #9756a3;
+  border: 1px solid #9756a3;
+  border-radius: 10px;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+  font-size: 18px;
+  font-weight: normal;
+  -webkit-transition:all .3s ease-out;
+  -moz-transition:all .3s ease-out;
+  -ms-transition:all .3s ease-out;
+  -o-transition:all .3s ease-out;
+  transition:all .3s ease-out;
+}
+.button_agenda:hover, #input_new_agenda:hover, #input_clear_agenda:hover, #input_refresh_agenda:hover, #input_undo_agenda:hover {
+  -webkit-transform:translate(0px,-5px);
+  -moz-transform:translate(0px,-5px);
+  -ms-transform:translate(0px,-5px);
+  -o-transform:translate(0px,-5px);
+  transform:translate(0px,-5px);
+}
+.button_agenda svg {
+  margin: 0 8px 3px 0;
+  width: 24px;
+  height: 24px;
+}
+.button_agenda svg .fill {
+  fill: #9756a3;
+}
+.button_agenda span, #input_new_agenda, #input_clear_agenda, #input_refresh_agenda, #input_undo_agenda {
+  font-family: 'Gloria Hallelujah', cursive;
+}
+.new_agenda {
+  top: 129px;
+  right: 20px;
+}
+.back_agenda {
+  top: 159px;
+  right: 140px;
+}
+.edit_agenda, .show_agenda {
+  top: 159px;
+  right: 300px;  
+}
+.show-list {
+  display: block;
+  margin: auto;
+  width: 30%;
+  border: 1px solid #9756a3;
+  border-radius: 10px;
+}
+.show-list ul {
+  list-style-type: none;
+  padding: 0px;
+  margin: 0px;
+}
+.show-list ul li {
+  border-bottom: 1px solid #9756a3;
+}
+.show-list ul li:last-child {
+  border-bottom: 0px;
+}
+.show-list ul li p {
+  margin: 0px;
+  padding: 10px 0 10px 20px;
+}
+.form-caixa-hidden {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #9756a3;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+  border-radius: 10px;
+}
+.tab {
+  overflow: hidden;
+}
+.tab a.active {
+  background-color: #eee8f3;
+}
+.tabcontent {
+  display: none;
+}
+.form-caixa {
+  display: block;
+  margin: auto;
+  width: 80%;
+  border: 1px solid #9756a3;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+  border-radius: 10px;
+}
+.form-caixa p, .form-caixa-hidden p {
+  margin: 0px;
+  padding: 10px 0 10px 20px;
+}
+#caixa_data,#caixa_caixa_inicial,#caixa_dinheiro,#caixa_saida,#caixa_descricao,#caixa_cheque,#caixa_maquineta_loja,#caixa_maquineta_motoboy,#caixa_cappta,#caixa_mundipagg,#caixa_caixa_final {
+  border-radius: 5px;
+  border: 1px solid #9756a3;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+}
+#caixa_descricao {
+  height: 300px;
+  width: 250px;
+}
+#input_new_agenda, #input_clear_agenda, #input_refresh_agenda, #input_undo_agenda {
+  height: 34px;
+  position:absolute;
+  margin-left: 20px;
+  width: 150px;
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+  font-size: 18px;
+  font-weight: normal;
+  cursor: pointer;
+  -webkit-transition:all .3s ease-out;
+  -moz-transition:all .3s ease-out;
+  -ms-transition:all .3s ease-out;
+  -o-transition:all .3s ease-out;
+  transition:all .3s ease-out;
+}
+#input_new_agenda {
+  color: #4caf4f;
+  border: 1px solid #4caf4f;
+  background-image: url(add.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+}
+#input_clear_agenda  {
+  color: #ff4c4c;
+  border: 1px solid #ff4c4c;
+  background-image: url(remove.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 22px;
+}
+#input_refresh_agenda {
+  color: #4caf4f;
+  border: 1px solid #4caf4f;
+  background-image: url(refresh.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 38px;
+}
+#input_undo_agenda {
+  color: #ff4c4c;
+  border: 1px solid #ff4c4c;
+  background-image: url(cancel.png);
+  background-position: 18px 4px;
+  background-repeat: no-repeat;
+  padding-left: 34px;
+}
+.navbar {
+  height: 60px;
+}
+.navbar a {
+  position: absolute;
+  text-align: center;
+  font-family: 'Gloria Hallelujah', cursive;
+  font-size: 18px;
+  height: 30px;
+  outline: none;
+  background-color: #fff;
+  color: #9756a3 !important;
+  border: 1px solid #9756a3;
+  border-bottom: 0px;
+  border-radius: 10px 10px 0 0;
+  cursor: pointer;
+}
+#navGeral {
+  width: 80px;
+  left: 130px;
+}
+#navDesc {
+  width: 206px;
+  left: 218px;
+}
+#searchInput {
+  background-image: url(search.png); 
+  background-position: 10px 6px; 
+  background-repeat: no-repeat;
+  color: #000;
+  width: 30%;
+  font-size: 18px; 
+  padding: 6px 20px 6px 40px;
+  border: 1px solid #9756a3;
+  border-radius: 10px;
+  box-shadow: 1px 2px rgba(44,62,80,0.15);
+}
+#searchInput::placeholder {
+  color: #9756a3;
+}
+
+label {
+  font-size: 14px;
+  text-transform: capitalize;
 }

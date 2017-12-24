@@ -1,8 +1,6 @@
 // SORT TABLE
 function sortTable(n) {
-  var table, rows, switching, i, prev, next, shouldSwitch, direction, switchcount = 0;
-  var prevToFloat = parseFloat(prev.innerHTML.toLowerCase());
-  var nextToFloat = parseFloat(next.innerHTML.toLowerCase());
+  var table, rows, switching, i, prev, next, shouldSwitch, direction, switchcount = 0, prevToFloat, nextToFloat;
   table = document.getElementById('tabela-caixa');
   switching = true;
   direction = 'asc';
@@ -13,6 +11,8 @@ function sortTable(n) {
       shouldSwitch = false;
       prev = rows[i].getElementsByTagName('td')[n];
       next = rows[i + 1].getElementsByTagName('td')[n];
+      prevToFloat = parseFloat(prev.innerHTML.toLowerCase());
+      nextToFloat = parseFloat(next.innerHTML.toLowerCase());
       if (direction == 'asc') {
         if (prevToFloat > nextToFloat) {
           shouldSwitch= true;
@@ -117,9 +117,10 @@ function searchDate() {
   }
 }
 
-
 window.onload = function () {
-  sortTable(1);
-  sortTable(1);
-  document.querySelector('#tabela-caixa th').click();
+  if (window.location.href.match('clone-caixa-rhenanalves.c9users.io/caixas') != null) {
+    sortTable(1);
+    sortTable(1);
+    document.querySelector('#tabela-caixa th').click();
+   }
 }
