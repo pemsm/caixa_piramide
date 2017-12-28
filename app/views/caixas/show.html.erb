@@ -11,7 +11,17 @@
       <h2>Caixa do dia <%= @caixa.data.strftime("%d/%m/%Y") %></h2>
     </div>
   </div>
-
+  
+  <% unless @caixa.caixa_inicial.is_a? Float; @caixa.caixa_inicial = 0 end %>
+  <% unless @caixa.dinheiro.is_a? Float; @caixa.dinheiro = 0 end %>
+  <% unless @caixa.saida.is_a? Float; @caixa.saida = 0 end %>
+  <% unless @caixa.cheque.is_a? Float; @caixa.cheque = 0 end %>
+  <% unless @caixa.maquineta_loja.is_a? Float; @caixa.maquineta_loja = 0 end  %>
+  <% unless @caixa.maquineta_motoboy.is_a? Float; @caixa.maquineta_motoboy = 0 end  %>
+  <% unless @caixa.cappta.is_a? Float; @caixa.cappta = 0 end  %>
+  <% unless @caixa.mundipagg.is_a? Float; @caixa.mundipagg = 0 end  %>
+  <% unless @caixa.caixa_final.is_a? Float; @caixa.caixa_final = 0 end %>
+  
   <div class="show-list">
     <ul>
       <li><p><strong>Data: </strong> <%= @caixa.data.strftime("%d/%m/%Y") %></p></li>
