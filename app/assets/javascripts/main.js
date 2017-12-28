@@ -1,4 +1,4 @@
-// SORT TABLE
+// Sort table
 function sortTable(n) {
   var table, rows, switching, i, prev, next, shouldSwitch, direction, switchcount = 0, prevToFloat, nextToFloat;
   table = document.getElementById('tabela-caixa');
@@ -37,33 +37,31 @@ function sortTable(n) {
     }
   }
 }
-// SORT DATE
+// Sort table by date
 function convertDate(date) {
   var splitDate = date.split('/');
   return (splitDate[2]+splitDate[1]+splitDate[0]);
 }
 
 function sortDateAsc() {
-  var tbody = document.querySelector('#tabela-caixa tbody');
-  var rows = [].slice.call(tbody.querySelectorAll('tr'));
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tabela-caixa tbody tr'));
   
   rows.sort(function(a,b) {
     return convertDate(a.cells[0].innerHTML) - convertDate(b.cells[0].innerHTML);
   });
   rows.forEach(function(element) {
-    tbody.appendChild(element);
+    document.querySelector('#tabela-caixa tbody').appendChild(element);
   });
 }
 
 function sortDateDesc() {
-  var tbody = document.querySelector('#tabela-caixa tbody');
-  var rows = [].slice.call(tbody.querySelectorAll('tr'));
-  
+  var rows = Array.prototype.slice.call(document.querySelectorAll('#tabela-caixa tbody tr'));
+   
   rows.sort(function(a,b) {
     return convertDate(b.cells[0].innerHTML) - convertDate(a.cells[0].innerHTML);
   });
   rows.forEach(function(element) {
-    tbody.appendChild(element);
+    document.querySelector('#tabela-caixa tbody').appendChild(element);
   });
 }
 
@@ -78,8 +76,7 @@ function sortTableByDate() {
   return counter += 1;
 }
 
-// TAB
-
+// Tab
 function openTab(event, tabName) {
   var i, tabcontent, tablinks;
   tabcontent = document.getElementsByClassName('tabcontent');
@@ -96,8 +93,7 @@ function openTab(event, tabName) {
   event.currentTarget.className += ' active';
 }
 
-// SEARCH
-
+// Search
 function searchDate() {
   var input, filter, table, tr, td, i;
   input = document.getElementById('searchInput');
@@ -115,12 +111,4 @@ function searchDate() {
       }
     } 
   }
-}
-
-window.onload = function () {
-  if (window.location.href.match('clone-caixa-rhenanalves.c9users.io/caixas') != null) {
-    sortTable(1);
-    sortTable(1);
-    document.querySelector('#tabela-caixa th').click();
-   }
 }

@@ -308,12 +308,6 @@ svg {
 #searchInput::placeholder {
   color: #9756a3;
 }
-
-label {
-  font-size: 14px;
-  text-transform: capitalize;
-}
-
 .descriptionHover .descriptionHoverText {
   visibility: hidden;
   width: 160px;
@@ -325,7 +319,6 @@ label {
   position: absolute;
   z-index: 1;
 }
-
 .descriptionHover:hover .descriptionHoverText {
   visibility: visible;
 }
