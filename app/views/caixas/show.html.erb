@@ -36,7 +36,8 @@
       
       <li><p><strong>Caixa Final: </strong> R$ <%= @caixa.caixa_final %></p></li>
       
-      <li><p><strong>Total Diário: </strong> R$ </p></li>
+      <% total_dia = ((@caixa.caixa_inicial*-1) + @caixa.dinheiro + @caixa.saida + @caixa.cheque + @caixa.maquineta_loja + @caixa.maquineta_motoboy + @caixa.cappta + @caixa.mundipagg + @caixa.caixa_final).round(2)%>
+      <li><p><strong>Total Diário: </strong> R$<%= total_dia %> </p></li>
     
     </ul>
   </div>      
