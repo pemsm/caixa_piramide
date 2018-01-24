@@ -56,16 +56,16 @@
       <tbody>  
         <tr> 
           <td><%= caixa.data.strftime("%d/%m/%Y") %></td>
-          <td><%= caixa.caixa_inicial %></td>
-          <td><%= caixa.dinheiro %></td>
-          <td class="descriptionHover"><%= caixa.saida %><span class="descriptionHoverText"><%= caixa.descricao %></span></td>
-          <td><%= caixa.cheque %></td>
-          <td><%= caixa.maquineta_loja %></td>
-          <td><%= caixa.maquineta_motoboy %></td>
-          <td><%= caixa.cappta %></td>
-          <td><%= caixa.mundipagg %></td>
-          <td><%= caixa.caixa_final %></td>
-          <td><%= total_dia = ((caixa.caixa_inicial*-1)+caixa.dinheiro+caixa.saida+caixa.cheque+caixa.maquineta_loja+caixa.maquineta_motoboy+caixa.cappta+caixa.mundipagg+caixa.caixa_final).round(2) %></td>
+          <td><%= 'R$ ' %><%= caixa.caixa_inicial %></td>
+          <td><%= 'R$ ' %><%= caixa.dinheiro %></td>
+          <td class="descriptionHover"><%= 'R$ ' %><%= caixa.saida %><span class="descriptionHoverText"><%= caixa.descricao %></span></td>
+          <td><%= 'R$ ' %><%= caixa.cheque %></td>
+          <td><%= 'R$ ' %><%= caixa.maquineta_loja %></td>
+          <td><%= 'R$ ' %><%= caixa.maquineta_motoboy %></td>
+          <td><%= 'R$ ' %><%= caixa.cappta %></td>
+          <td><%= 'R$ ' %><%= caixa.mundipagg %></td>
+          <td><%= 'R$ ' %><%= caixa.caixa_final %></td>
+          <td><%= 'R$ ' %><%= total_dia = ((caixa.caixa_inicial*-1)+caixa.dinheiro+caixa.saida+caixa.cheque+caixa.maquineta_loja+caixa.maquineta_motoboy+caixa.cappta+caixa.mundipagg+caixa.caixa_final).round(2) %></td>
           <% total = total + total_dia  %>
           <td><%= link_to '<button class="show"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path class="fill" d="M51.6,96.7c11,0,21-3.9,28.8-10.5l35,35c0.8,0.8,1.8,1.2,2.9,1.2s2.1-0.4,2.9-1.2c1.6-1.6,1.6-4.2,0-5.8l-35-35   c6.5-7.8,10.5-17.9,10.5-28.8c0-24.9-20.2-45.1-45.1-45.1C26.8,6.5,6.5,26.8,6.5,51.6C6.5,76.5,26.8,96.7,51.6,96.7z M51.6,14.7   c20.4,0,36.9,16.6,36.9,36.9C88.5,72,72,88.5,51.6,88.5c-20.4,0-36.9-16.6-36.9-36.9C14.7,31.3,31.3,14.7,51.6,14.7z"/></g></svg></button>'.html_safe, caixa %></td>
           <td><%= link_to '<button class="edit"><svg version="1.1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 129 129" xmlns:xlink="http://www.w3.org/1999/xlink" enable-background="new 0 0 129 129"><g><path class="fill" d="m119.2,114.3h-109.4c-2.3,0-4.1,1.9-4.1,4.1s1.9,4.1 4.1,4.1h109.5c2.3,0 4.1-1.9 4.1-4.1s-1.9-4.1-4.2-4.1z"/><path class="fill" d="m5.7,78l-.1,19.5c0,1.1 0.4,2.2 1.2,3 0.8,0.8 1.8,1.2 2.9,1.2l19.4-.1c1.1,0 2.1-0.4 2.9-1.2l67-67c1.6-1.6 1.6-4.2 0-5.9l-19.2-19.4c-1.6-1.6-4.2-1.6-5.9-1.77636e-15l-13.4,13.5-53.6,53.5c-0.7,0.8-1.2,1.8-1.2,2.9zm71.2-61.1l13.5,13.5-7.6,7.6-13.5-13.5 7.6-7.6zm-62.9,62.9l49.4-49.4 13.5,13.5-49.4,49.3-13.6,.1 .1-13.5z"/></g></svg></button>'.html_safe, edit_caixa_path(caixa) %></td>
@@ -80,7 +80,7 @@
         <tr>
           <td><span>Total:</span></td>
           <td colspan="9"></td>
-          <td><%= total.round(2) %></td>
+          <td><%= 'R$ ' %><%= total.round(2) %></td>
           <td colspan="3"></td>
         </tr>
       </tfoot>
